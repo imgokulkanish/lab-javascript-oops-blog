@@ -10,6 +10,8 @@ class Blog {
       var image = document.createElement('img')
       image.src = './assets/javascript.png'
       document.getElementById('flashcard').appendChild(image)
+      var pic=document.getElementById("card-text");
+      pic.insertBefore(image,pic[0]);
     }
     addTitle(){
     console.log('Title' + title)
@@ -32,7 +34,7 @@ var addpost = document.getElementById('addBlog')
 addpost.addEventListener('click', function () {
   document.getElementById('popupContact').style.display = 'block'
 })
-let post = document.getElementById('post')
+var post = document.getElementById('post')
 post.addEventListener('click', function () {
   document.getElementById('popupContact').style.display = 'none'
   let title = document.getElementById('title').value
